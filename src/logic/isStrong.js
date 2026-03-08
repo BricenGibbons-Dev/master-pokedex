@@ -1,3 +1,6 @@
+const typeChart = require('./data/typeChart');
+
+
 // Check if an attacking type is strong against a defending type
 function isStrong(attType, defType) {
     const att = attType.trim().toLowerCase();

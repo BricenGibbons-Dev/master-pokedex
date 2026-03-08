@@ -17,6 +17,6 @@ const typeChart = {
     dragon:   { double: ["dragon"], half: [], zero: [] }
 };
 
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = typeChart;
-}
+module.exports = typeChart;
+
+
