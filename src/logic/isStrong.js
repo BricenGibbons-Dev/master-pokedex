@@ -7,7 +7,3 @@ function isStrong(attType, defType) {
     
     return typeChart[att].double.includes(def);
 }
-
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = isStrong;
-}

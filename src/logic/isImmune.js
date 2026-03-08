@@ -7,7 +7,3 @@ function isImmune(attType, defType) {
     
     return typeChart[att].zero.includes(def);
 }
-
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = isImmune;
-}

@@ -19,7 +19,3 @@ function multiplier(attType, defType) {
 // Test cases
 console.log(multiplier("normal", "rock"));
 console.log(multiplier("dragon", "dragon"));
-
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { multiplier, isStrong, isWeak, isImmune };
-}

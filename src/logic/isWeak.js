@@ -7,7 +7,3 @@ function isWeak(attType, defType) {
     
     return typeChart[att].half.includes(def);
 }
-
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = isWeak;
-}
