@@ -1,5 +1,4 @@
-console.log('Pika Pika');
-
+// Type effectiveness chart for Pokemon battles
 const typeChart = {
     normal: { double: [], half: ["rock"], zero: ["ghost"] },
     fire:  { double: [], half: [], zero: [] },
@@ -18,21 +17,6 @@ const typeChart = {
     dragon:  { double: ["dragon"], half: [], zero: [] }
 }
 
-function multiplier(attType, defType) {
-    const att = attType.trim().toLowerCase();
-    const def = defType.trim().toLowerCase();
-    
-    //TODO: add error handling for invalid types
-   
-    if (typeChart[att].double.includes(def)) return 2;
-
-    if (typeChart[att].half.includes(def)) return 0.5;
-
-    if (typeChart[att].zero.includes(def)) return 0;
-
-    return 1;
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = typeChart;
 }
-//Test cases
-console.log(multiplier("normal", "rock"));
-console.log(multiplier("dragon", "dragon"));
-
