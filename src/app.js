@@ -1,13 +1,14 @@
 const typeChart = require('./data/typeChart');
 
+
 // Function to get damage multiplier based on type matchup
 function multiplier(attType, defType) {
     const att = attType.trim().toLowerCase();
     const def = defType.trim().toLowerCase();
     
-    // Error handling for defending type (user input)
-    if (!typeChart[def]) {
-        console.error(`Invalid defending type: ${defType}`);
+    const rules = typeChart[att];
+    if (!rules) {
+        console.error(`Invalid attacking type: ${attType}`);
         return 1;
     }
 
@@ -17,6 +18,33 @@ function multiplier(attType, defType) {
     return 1;
 }
 
-// Test cases
+/* Test cases
 console.log(multiplier("normal", "rocky"));
 console.log(multiplier("dragon", "dragon"));
+*/
+
+function recommendedTypes(defType) {
+     const def = defType.trim().toLowerCase();
+
+  // Validate user input (defender type)
+  if (!Object.prototype.hasOwnProperty.call(typeChart, def)) {
+    console.error(`Invalid defending type: ${defType}`);
+    return null;
+  }
+
+  const use = [];
+  const avoid = [];
+  const immune = [];
+
+  for (const attType of Object.keys(typeChart)) {
+    const m = multiplier(attType, def);
+
+    if (m === 2) use.push(attType);
+    else if (m === 0.5) avoid.push(attType);
+    else if (m === 0) immune.push(attType);
+  }
+
+  return { defType: def, use, avoid, immune };
+}
+// Test cases
+console.log(recommendedTypes("fire"));
