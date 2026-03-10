@@ -2,11 +2,11 @@
 
 A JavaScript application for calculating Pokémon type matchups, demonstrating modular design and OOP principles.
 
-## 🎯 Overview
+## Overview
 
 Calculates damage multipliers for Generation 1 Pokémon types, with validation and recommendations. Built for scalability toward a full PokéDex tracker.
 
-## 🚀 Features
+## Features
 
 - **Type Chart**: Complete Gen 1 data with 2×/½×/0× relationships.
 - **Core Functions**:
