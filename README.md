@@ -39,7 +39,7 @@ Calculates damage multipliers for Generation 1 Pokémon types, with validation a
 - Abstraction: High-level functions.
 - Single Responsibility: One task per function.
 
-##  Roadmap
+## Roadmap
 
 ### Phase 1: Core (Current)
 
@@ -64,7 +64,7 @@ Calculates damage multipliers for Generation 1 Pokémon types, with validation a
 - Shiny tracking.
 - Export/import.
 
-##  Usage
+## Usage
 
 **Terminal**:
 
