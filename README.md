@@ -2,21 +2,20 @@
 
 A JavaScript application for calculating Pokémon type matchups, demonstrating modular design and OOP principles.
 
-## 🎯 Overview
+## Overview
 
 Calculates damage multipliers for Generation 1 Pokémon types, with validation and recommendations. Built for scalability toward a full PokéDex tracker.
 
-## 🚀 Features
+## Features
 
-- **Type Chart**: Complete Gen 1 data with 2×/½×/0× relationships.
+- **Type Chart**: Complete Gen 1 data with 2×/0.5×/0× relationships.
 - **Core Functions**:
   - `multiplier(attType, defType)`: Returns damage multiplier.
-  - `isStrong/isWeak/isImmune(attType, defType)`: Boolean checks.
   - `recommendedTypes(defType)`: Suggests strong attack types.
 - **Error Handling**: Validates inputs, provides safe defaults.
-- **Modular Structure**: Separated data, logic, and app layers.
+- **Modular Structure**: Separated data and app layers.
 
-## 🛠️ Technical Decisions
+## Technical Decisions
 
 **Language**: Vanilla JavaScript (ES6+)
 
@@ -24,7 +23,7 @@ Calculates damage multipliers for Generation 1 Pokémon types, with validation a
 
 **Architecture**: CommonJS modules
 
-- Separation of concerns: data isolated from logic.
+- Separation of concerns: data and application logic in separate modules.
 
 **Data**: Object with arrays
 
@@ -40,7 +39,7 @@ Calculates damage multipliers for Generation 1 Pokémon types, with validation a
 - Abstraction: High-level functions.
 - Single Responsibility: One task per function.
 
-## 📋 Roadmap
+##  Roadmap
 
 ### Phase 1: Core (Current)
 
@@ -49,6 +48,7 @@ Calculates damage multipliers for Generation 1 Pokémon types, with validation a
 
 ### Phase 2: Enhancement
 
+- Unit tests.
 - Class-based `TypeChart` with private fields.
 - JSON Pokémon database for name lookups.
 - Multi-gen support.
@@ -63,9 +63,8 @@ Calculates damage multipliers for Generation 1 Pokémon types, with validation a
 
 - Shiny tracking.
 - Export/import.
-- Unit tests.
 
-## 🏃‍♂️ Usage
+##  Usage
 
 **Terminal**:
 
@@ -80,7 +79,6 @@ node src/app.js
 ```
 src/
 ├── data/typeChart.js    # Type data
-├── logic/               # Helper functions
 └── app.js              # Main logic
 ```
 
